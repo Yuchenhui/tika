@@ -32,11 +32,11 @@ public class MinioEmitterTest {
 
     @Test
     public void oneOff() throws Exception {
-        String endpoint = "http://127.0.0.1:9000";
-        String emitKey = "123456/marshall-test-5PG3WlIQgQY.pdf";
+        String endpoint = "http://127.0.0.1:6100";
+        String emitKey = "marshall-test:marshall:test:chi_sim:QSCWKo7LpK4.docx";
         String region = "us-east-1";
-        String accessKey = "7YJXNRHTAX04PIEAV9NB";
-        String secretKey = "+szUcO82UE4n0yzKAKMkuMxs207xKQADjpmDdEZS";
+        String accessKey = "admin";
+        String secretKey = "admin123";
         MinioEmitter minioEmitter = new MinioEmitter();
         minioEmitter.setEndpoint(endpoint);
         minioEmitter.setAccessKey(accessKey);
@@ -46,7 +46,7 @@ public class MinioEmitterTest {
 
         Metadata metadata = new Metadata();
         metadata.set(TikaCoreProperties.CREATED, new Date());
-        metadata.set(TikaCoreProperties.TIKA_CONTENT, "the quick brown fox");
+        metadata.set(TikaCoreProperties.TIKA_CONTENT, "（机场有群，购买后请入群，请谨慎购买，使用后有成瘾性）");
 
         HashMap mappings = new HashMap();
         FieldNameMappingFilter filter = new FieldNameMappingFilter();

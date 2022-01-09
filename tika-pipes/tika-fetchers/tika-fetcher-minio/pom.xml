@@ -65,7 +65,7 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Automatic-Module-Name>org.apache.tika.pipes.emitter.minio</Automatic-Module-Name>
+                            <Automatic-Module-Name>org.apache.tika.pipes.fetcher.minio</Automatic-Module-Name>
                         </manifestEntries>
                     </archive>
                 </configuration>
